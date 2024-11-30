@@ -1,0 +1,6 @@
+# Ignorar todos los archivos .env
+*.env
+# Ignorar los directorios __pycache__
+**/__pycache__/*
+# Ignorar la carpeta 'env' (si es un entorno virtual)
+env/

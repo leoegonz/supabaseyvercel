@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "carppython_vercel_task/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "carpython_vercel_task/wsgi.py"
+      }
+    ]
+  }
