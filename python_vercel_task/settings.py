@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import  config
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY', default='django-insecure-tlv)36c^h%me#0j)!67193036i0(q!%)rm_9k19_&32jf9!t3b')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres.yqjycevjbnshwvmxjfyp',
-        'PASSWORD': config('pass_env'),
-        'HOST': config('Host_env'),
+        'PASSWORD': config('pass_env', default='Son33Flor1#Z'),
+        'HOST': config('Host_env', default='aws-0-us-west-1.pooler.supabase.com'),
         'PORT': '6543',
     }
 }
